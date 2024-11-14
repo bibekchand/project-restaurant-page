@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.5;
+    background-image: url("momoPicture.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.hero-text{
+    text-align: center;
+}
+header{
+    backdrop-filter: blur(5px);
+    font-style:italic;
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav>ul {
+    display: flex;
+    font-size: 1.2rem;
+    gap: 50px;
+    list-style: none;
+    flex-wrap:wrap;
+}
+
+button {
+    font: inherit;
+    border: 2px solid black;
+    width: 100px;
+    background-color: rgba(255, 255, 128, 0);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(46, 45, 45, .7);
+    color: white;
+}
+
+header li {
+    position: relative;
+}
+
+button+span::before {
+    content: "→";
+    color:rgb(12, 12, 0);
+    font-size:1.5rem;
+    transform: rotate(30deg);
+    position: absolute;
+    left:-22px;
+    top:-20px;
+    border-radius: 50%;
+    transition: .3s ease-in;
+    visibility: hidden;
+}
+
+button+span::after {
+    content: "→";
+    color:rgb(12, 12, 0);
+    font-size:1.5rem;
+    transform: rotate(150deg);
+    position: absolute;
+    top:-15px;
+    border-radius: 50%;
+    transition: .2s;
+    visibility: hidden;
+}
+
+button:hover+span::before, button:hover+span::after {
+   visibility: visible;
+}
