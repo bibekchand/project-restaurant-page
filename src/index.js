@@ -1,13 +1,13 @@
 import "./style.css";
 import HomeEventHandler from "./homeFunction.js";
 import menuEventHandler from "./menuFunction.js";
+import contactEventHandler from "./contactFunction.js"
 const home = document.querySelector("#home");
 const menu = document.querySelector("#menu");
-const about = document.querySelector("#about");
+const contact = document.querySelector("#contact");
 
 home.addEventListener("click", HomeEventHandler);
 menu.addEventListener("click", menuEventHandler);
-// about.addEventListener("click", aboutEventHandler);
+contact.addEventListener("click", contactEventHandler);
 
-
-menu.dispatchEvent(new Event("click"));
+home.dispatchEvent(new Event("click"));

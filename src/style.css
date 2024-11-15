@@ -58,7 +58,7 @@ nav>ul {
  button {
     font: inherit;
     border: 2px solid black;
-    width: 100px;
+    width: 120px;
     background-color: rgba(255, 255, 128, 0);
     color: rgb(0, 0, 0);
     cursor: pointer;
@@ -170,15 +170,47 @@ footer{
     align-items: center;
     gap:40px;
 }
+#menuContainer h1{
+    text-decoration:underline;
+    font-size:2.5rem;
+}
 
 #menuContainer > .cards{
-    width:300px;
+    width:400px;
     height: 200px;
     display:flex;
     align-items: center;
     gap:20px;
 }
-.cards > .dishName{
-    width:100px;
+#menuContainer> .cards > .dishName{
+    width:500px;
     border-bottom: 4px dotted black;
+}
+#menuContainer>.cards{
+    transition:.4s ease-in-out;
+}
+#menuContainer > .cards:hover{
+    box-shadow: 1px 1px 4px;
+    cursor:pointer;
+    padding:10px;
+    background-color: rgb(11, 11, 11);
+    color:white;
+    border-radius:10px;
+}
+#menuContainer > .cards:hover > .dishName{
+    border-color:white;
+}
+
+#contactContainer{
+    font-size:1.5rem;
+    padding:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:40px;
+}
+#contactContainer>h2{
+    font-size:2rem;
+    text-decoration:underline;
 }
