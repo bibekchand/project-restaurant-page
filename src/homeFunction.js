@@ -12,11 +12,13 @@ function handler(){
     image.setAttribute("src", chefImage);
     imageContainer.appendChild(image);
     homeContainer.appendChild(imageContainer);
-    content.appendChild(homeContainer);
     const p1 = document.createElement("p");
-    p1.textContent= "We have the best momo's in the town just for you";
+    p1.textContent= "We have the best momo's in the town just for you !!!";
     homeContainer.appendChild(p1);
-    
+    const button = document.createElement("button");
+    button.textContent = "Order Now";
+    homeContainer.appendChild(button);
+    content.appendChild(homeContainer);
 }
 
 export default handler;

@@ -10,4 +10,4 @@ menu.addEventListener("click", menuEventHandler);
 // about.addEventListener("click", aboutEventHandler);
 
 
-home.dispatchEvent(new Event("click"));
+menu.dispatchEvent(new Event("click"));
