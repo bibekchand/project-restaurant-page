@@ -3,23 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     line-height: 1.5;
-    background-image: url("momoPicture.jpg");
+ 
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
+    color:rgb(255, 255, 255);
 }
 
-.hero-text{
+.hero-text {
     text-align: center;
+    font-size: 1.4rem;
 }
-header{
+
+header {
     backdrop-filter: blur(5px);
-    font-style:italic;
+    font-style: italic;
+    height: 10vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav {
-    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +37,7 @@ nav>ul {
     font-size: 1.2rem;
     gap: 50px;
     list-style: none;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 button {
@@ -54,12 +61,12 @@ header li {
 
 button+span::before {
     content: "→";
-    color:rgb(12, 12, 0);
-    font-size:1.5rem;
+    color: rgb(12, 12, 0);
+    font-size: 1.5rem;
     transform: rotate(30deg);
     position: absolute;
-    left:-22px;
-    top:-20px;
+    left: -22px;
+    top: -20px;
     border-radius: 50%;
     transition: .3s ease-in;
     visibility: hidden;
@@ -67,16 +74,64 @@ button+span::before {
 
 button+span::after {
     content: "→";
-    color:rgb(12, 12, 0);
-    font-size:1.5rem;
+    color: rgb(12, 12, 0);
+    font-size: 1.5rem;
     transform: rotate(150deg);
     position: absolute;
-    top:-15px;
+    top: -15px;
     border-radius: 50%;
     transition: .2s;
     visibility: hidden;
 }
 
-button:hover+span::before, button:hover+span::after {
-   visibility: visible;
+button:hover+span::before,
+button:hover+span::after {
+    visibility: visible;
+}
+#content{
+    height:80vh;
+}
+#homeContainer{
+    width: 70ch;
+    backdrop-filter: blur(5px);
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
+#homeContainer>div {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+#homeContainer>div>img {
+    width: 200px;
+    height: auto;
+    background-color: rgb(243, 235, 235);
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+    transform: scale(1.5);
+}
+
+#homeContainer p {
+    max-inline-size: 45ch;
+    font-size:1.3rem;
+    text-align: center;
+    font-weight: bolder;
+}
+footer{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 70px;    
+    font-weight: bolder;
+    backdrop-filter:blur(5px);
 }
